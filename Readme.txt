@@ -1,3 +1,5 @@
+Install node
+Install firebase-admin
 rm -rf node_modules/ package-lock.json
 npm install ajv@^6.9.1
 npm install --no-audit
