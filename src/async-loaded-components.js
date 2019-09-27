@@ -25,7 +25,7 @@ import Uploader from './Uploader';
 import FirebaseHelper from './FirebaseHelper';
 import PrivacySettings from './PrivacySettings';
 import UserPage from './UserPage';
-import SlidePage from './SlidePage';
+import SkimoPage from './SkimoPage';
 
 // Load the core of the app.
 const firebaseHelper = new FirebaseHelper();
@@ -35,7 +35,7 @@ export const post = new Post(firebaseHelper);
 export const userPage = new UserPage(firebaseHelper, messagingHelper);
 export const feed = new Feed(firebaseHelper);
 export const searchPage = new SearchPage(firebaseHelper);
-export const slidePage = new SlidePage();
+export const skimoPage = new SkimoPage();
 new AuthData(firebaseHelper, privacySettings);
 new Uploader(firebaseHelper);
 new Search(firebaseHelper);

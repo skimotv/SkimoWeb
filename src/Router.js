@@ -45,7 +45,7 @@ export default class Router {
     const showGeneralFeed = async () => (await loadComponents).feed.showGeneralFeed();
     const clearFeed = async () => (await loadComponents).feed.clear();
     const showPost = async (postId) => (await loadComponents).post.loadPost(postId);
-    const showSlide = async (slideId) => (await loadComponents).slidePage.loadSlides(slideId);
+    const showSkimo = async (skimoId) => (await loadComponents).skimoPage.loadSkimos(skimoId);
 
     // Configuring middlwares.
     page(Router.setLinkAsActive);
@@ -60,7 +60,7 @@ export default class Router {
     page('/about', () => {clearFeed(); this.displayPage('about');});
     page('/terms', () => {clearFeed(); this.displayPage('terms');});
     page('/add', () => {this.displayPage('add', true);});
-    page('/slide/:slideId', (context) => {showSlide(context.params.slideId); this.displayPage('slide');});
+    page('/skimo/:skimoId', (context) => {showSkimo(context.params.skimoId); this.displayPage('skimo');});
     page('*', () => page('/'));
 
     // Start routing.

@@ -15,7 +15,8 @@ export default class SkipNext {
 
   setButtonTextSuccess(responseText) {
     try {
-      let data = JSON.parse(responseText);
+      data = responseText;
+      //let data = JSON.parse(responseText);
       if (data && data[0]) {
         new SkipNext().showToastMessage('Skimo generated successfully');
         console.log(responseText);

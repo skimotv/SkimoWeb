@@ -22,6 +22,7 @@ import Auth from './Auth';
 import IpFilter from './IpFilter';
 import Router from './Router';
 //import M from 'material-design-lite';
+import 'material-design-lite';
 import {Utils} from './Utils';
 import SkipNext from './addButtonPOST';
 //import M from '../node_modules/material-design-lite/material.min.js';
@@ -41,7 +42,7 @@ import './app.css';
  *  - Auth to know if the user is signed-in.
  *  - The App's router which can display the Splash page.
  *  - Enable Offline.
- * 
+ *
  * The rest of the app is loaded asynchroneously and passed to the router.
  * Google Analytics is asynchroneously loaded.
  */
