@@ -45,6 +45,7 @@ export default class Router {
     const showGeneralFeed = async () => (await loadComponents).feed.showGeneralFeed();
     const clearFeed = async () => (await loadComponents).feed.clear();
     const showPost = async (postId) => (await loadComponents).post.loadPost(postId);
+    const showSlide = async (slideId) => (await loadComponents).slidePage.loadSlides(slideId);
 
     // Configuring middlwares.
     page(Router.setLinkAsActive);
@@ -59,6 +60,7 @@ export default class Router {
     page('/about', () => {clearFeed(); this.displayPage('about');});
     page('/terms', () => {clearFeed(); this.displayPage('terms');});
     page('/add', () => {this.displayPage('add', true);});
+    page('/slide/:slideId', (context) => {showSlide(context.params.slideId); this.displayPage('slide');});
     page('*', () => page('/'));
 
     // Start routing.

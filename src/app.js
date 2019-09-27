@@ -21,16 +21,18 @@ import firebaseConfig from './firebase-config.json';
 import Auth from './Auth';
 import IpFilter from './IpFilter';
 import Router from './Router';
-import 'material-design-lite';
+//import M from 'material-design-lite';
 import {Utils} from './Utils';
+import SkipNext from './addButtonPOST';
+//import M from '../node_modules/material-design-lite/material.min.js';
 
 // Styling
 import 'material-design-icons/iconfont/material-icons.css';
 import 'typeface-amaranth/index.css';
 import 'material-design-lite/material.min.css';
 import 'firebaseui/dist/firebaseui.css';
+import 'materialize-css/dist/css/materialize.min.css';
 import './app.css';
-
 /**
  * This loads the critical path of the app to speed up first draw.
  * The following components are initially loaded:
@@ -57,6 +59,7 @@ $(document).ready(() => {
   const auth = new Auth();
   // Starts the router.
   window.fpRouter = new Router(auth);
+  document.getElementById('add2').onclick = function() {new SkipNext().sendInput();}
 });
 
 // Register the Service Worker that enables offline.
