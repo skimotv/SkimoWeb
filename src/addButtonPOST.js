@@ -8,26 +8,24 @@ export default class SkipNext {
       let postJSON = { url: "https://www.netflix.com/watch/" + numericalId, asset_id: numericalId + "" };
       this.httpPostAsync(postUrl, postJSON, this.setButtonTextSuccess);
     } else {
-      this.showToastMessage("Skimo failed to generate");
+      this.showToastMessage("Skimo failed to generate(1)");
       console.log('false0: Wrong Input');
     }
   };
 
   setButtonTextSuccess(responseText) {
     try {
-      data = responseText;
-      //let data = JSON.parse(responseText);
-      if (data && data[0]) {
+      if (responseText && responseText[0]) {
         new SkipNext().showToastMessage('Skimo generated successfully');
         console.log(responseText);
       }
       else {
-        new SkipNext().showToastMessage('Skimo failed to generate');
+        new SkipNext().showToastMessage('Skimo failed to generate(2)');
         console.log('false1: ', responseText);
       }
     } catch (e) {
       console.log(e);
-      new SkipNext().showToastMessage('Skimo failed to generate');
+      new SkipNext().showToastMessage('Skimo failed to generate(3)');
       console.log('false2: ', responseText);
     }
   }
