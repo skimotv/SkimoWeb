@@ -68,17 +68,17 @@ export default class SkimoPage {
               </p>
               <small>
                 <div style="margin-bottom: -25px;">
-                    <i class="material-icons" style="color:red;">favorite</i><span class="likes">0</span>
+                    <i class="material-icons">favorite</i><span class="likes">0</span>
                 </div>
               </small>
             </blockquote>
           </div>
           <div class="card-action">
             <a class="skimo-link" style="color:red;" href="${skimoLink}" target="_blank">
-              <i class="material-icons left" style="color:red;">play_arrow</i>
+              <i class="fa fa-play left" style="font-size:24px;color:red"></i>
             </a>
             <a href="${twitterLink}" target="_blank">
-            <i class="material-icons right" style="color:blue;">share</i></a>
+            <i class="fab fa-twitter right" style='font-size:24px;color:blue'></i></a>
           </div>
         </div>
       </div>
