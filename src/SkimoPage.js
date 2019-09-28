@@ -68,7 +68,7 @@ export default class SkimoPage {
               </p>
               <small>
                 <div style="margin-bottom: -25px;">
-                    <i class="material-icons">favorite</i><span class="likes">0</span>
+                    <i class="material-icons" style="color:red;">favorite</i><span class="likes">0</span>
                 </div>
               </small>
             </blockquote>
