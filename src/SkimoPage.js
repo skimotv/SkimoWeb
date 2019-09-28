@@ -54,7 +54,9 @@ export default class SkimoPage {
             let startsecond = (skimo.start % 60 >= 10) ? skimo.start % 60 : "0" + (skimo.start % 60);
             let endminute = (skimo.end / 60 >= 10) ? Math.floor(skimo.end / 60) : "0" + Math.floor(skimo.end / 60);
             let endsecond = (skimo.end % 60 >= 10) ? skimo.end % 60 : "0" + (skimo.end % 60);
+            const tweet = "..." + skimo.text.slice(0, 80) + "... " + escape("#") +"SkimoTV";
             const skimoLink = "https://www.netflix.com/watch/"+this.skimoId+"?t="+skimo.start;
+            const twitterLink = "http://twitter.com/share?text="+ tweet  +"&url=" + skimoLink;
             const element = $(`<div class="fp-help mdl-cell
       mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop" id="skimo-card-`+ skimo.id + `">
         <div class="card">
@@ -73,8 +75,10 @@ export default class SkimoPage {
           </div>
           <div class="card-action">
             <a class="skimo-link" style="color:red;" href="${skimoLink}" target="_blank">
-              <i class="material-icons left" style="color:red;">play_arrow</i> Play
+              <i class="material-icons left" style="color:red;">play_arrow</i>
             </a>
+            <a href="${twitterLink}" target="_blank">
+            <i class="material-icons right" style="color:blue;">share</i></a>
           </div>
         </div>
       </div>
