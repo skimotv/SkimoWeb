@@ -55,7 +55,8 @@ module.exports = (env, argv) => {
       compress: true, // enable gzip compression
       historyApiFallback: true, // true for index.html upon 404, object for multiple paths
       inline: true,
-      port: 5000,
+      host: "0.0.0.0",
+      port: 80,
       hot: false, // hot module replacement. Depends on HotModuleReplacementPlugin
       https: false, // true for self-signed, object for cert authority
       noInfo: true, // only errors & warns on hot reload

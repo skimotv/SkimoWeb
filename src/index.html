@@ -51,6 +51,7 @@
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
@@ -65,7 +66,7 @@
       messagingSenderId: "326250657589",
       appId: "1:326250657589:web:d989c70a070740e76bfe7c"
     };
-    // Initialize Firebase
+    //Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
 </head>
@@ -186,7 +187,7 @@
           <button
             class="fp-disabled-when-offline fp-signed-in-only mdl-button mdl-js-button mdl-button--fab mdl-cell--hide-tablet mdl-color--amber-400 mdl-shadow--4dp"
             id="add2" style="position: absolute;right: 20px;top: 18px;z-index: 998;">
-            <i class="material-icons">skip_next</i>
+            <img src="../public/images/icon-128x128.png" style="width:100%;" alt="Skimo Logo">
           </button>
         </div>
       </div>
@@ -754,6 +755,7 @@
 
       <section id="page-skimo" class="mdl-grid fp-content" style="display: none;">
         <div class="row" id="skimo-content">
+            <h5 id="skimo-title" class="fp-help mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">Loading..</h5>
         </div>
       </section>
 
@@ -768,35 +770,6 @@
     </main>
   </div>
   <div id="toastMessageWrapper"></div>
-  <style>
-
-      blockquote {
-        border: 1px solid #b3b3b3;
-        border-left: 10px solid #b3b3b3;
-        border-radius: 0;
-        background: #fafafa;
-        font-size: 18px;
-        padding: 10px 20px;
-        margin-bottom: -14px;
-      }
-
-      blockquote:before,
-      blockquote:after {
-        content: ""
-      }
-
-      blockquote p {
-        margin: 0;
-        line-height: 30px;
-        padding-bottom: 20px
-      }
-
-      blockquote .small {
-        display: block;
-        font-size: 80%;
-        text-align: right
-      }
-    </style>
 </body>
 
 </html>

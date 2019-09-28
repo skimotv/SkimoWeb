@@ -39,6 +39,7 @@ export default class SkimoPage {
         //let data = JSON.parse(result);
         let data = result;
         $('#add2').prop('disabled', true);
+        $('#skimo-title').text(Utils.escapeHtml(data.title));
         for (let i = 0; i < data.elements.length; i++) {
           let skimo = data.elements[i];
           skimo.id = Utils.escapeHtml(skimo.id.toString());
@@ -62,9 +63,9 @@ export default class SkimoPage {
         <div class="card">
           <div class="card-content">
             <span class="card-title">${startminute}:${startsecond} - ${endminute}:${endsecond}</span>
-            <blockquote>
+            <blockquote class="skimo-blockquote">
               <p>
-                <em>"${skimo.text}"</em>
+                "${skimo.text}"
               </p>
               <small>
                 <div style="margin-bottom: -25px;">
@@ -75,10 +76,10 @@ export default class SkimoPage {
           </div>
           <div class="card-action">
             <a class="skimo-link" style="color:red;" href="${skimoLink}" target="_blank">
-              <i class="fa fa-play left" style="font-size:24px;color:red"></i>
+-           <i class="fa fa-play left" style="font-size:24px;color:red"></i>
             </a>
             <a href="${twitterLink}" target="_blank">
-            <i class="fab fa-twitter right" style='font-size:24px;color:blue'></i></a>
+-           <i class="fab fa-twitter right" style='font-size:24px;color:blue'></i></a>
           </div>
         </div>
       </div>

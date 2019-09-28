@@ -22,6 +22,45 @@ a {
   text-decoration: underline;
   color: #0070a7;
 }
+blockquote {
+  border: 1px solid #b3b3b3;
+  border-left: 10px solid #b3b3b3;
+  border-radius: 0;
+  background: #fafafa;
+  font-family: "Helvetica","Arial",sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 10px 20px;
+  margin-bottom: -14px;
+}
+
+.skimo-blockquote:before,
+.skimo-blockquote:after {
+  content: ""
+}
+
+.skimo-blockquote p {
+  font-family: BebasNeue;
+  font-style:italic;
+  margin: 0;
+  line-height: 30px;
+  padding-bottom: 20px
+}
+
+.skimo-blockquote .small {
+  display: block;
+  font-size: 80%;
+  text-align: right
+}
+#skimo-title {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-family: Helvetica;
+  font-size: 1.64rem;
+  line-height: 110%;
+  font-weight: 400;
+}
 .mdl-menu a {
   text-decoration: none;
 }
