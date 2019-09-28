@@ -50,7 +50,7 @@ export default class SearchPage {
     const data = await this.firebaseHelper.getHastagsPosts(hashtag);
     // Reset the UI.
     this.clear();
-    
+
     const postIds = Object.keys(data.entries);
     if (postIds.length === 0) {
       this.noPosts.show();
@@ -125,7 +125,6 @@ export default class SearchPage {
                   mdl-cell--4-col-desktop mdl-grid mdl-grid--no-spacing">
             <div class="fp-overlay">
                 <i class="material-icons">favorite</i><span class="likes">0</span>
-                <i class="material-icons">mode_comment</i><span class="comments">0</span>
                 <div class="fp-pic-text"/>
             </div>
             <div class="mdl-card mdl-shadow--2dp mdl-cell
