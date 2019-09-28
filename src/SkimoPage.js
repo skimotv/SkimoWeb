@@ -72,8 +72,8 @@ export default class SkimoPage {
             </blockquote>
           </div>
           <div class="card-action">
-            <a class="skimo-link" href="${skimoLink}" target="_blank">
-              <i class="material-icons left">play_arrow</i> Play
+            <a class="skimo-link" style="color:red;" href="${skimoLink}" target="_blank">
+              <i class="material-icons left" style="color:red;">play_arrow</i> Play
             </a>
           </div>
         </div>
