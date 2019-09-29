@@ -14,7 +14,7 @@ export default class SkimoPage {
 
     this.skimoId = skimoId;
     $.ajax({
-      url: 'http://0.0.0.0:2345/skimo/' + skimoId,
+      url: 'http://10.0.0.4:2345/skimo/' + skimoId,
       context: this,
       error: function(result) {
         console.log("Server error", result);
@@ -79,7 +79,7 @@ export default class SkimoPage {
 -           <i class="fa fa-play left" style="font-size:24px;color:red"></i>
             </a>
             <a href="${twitterLink}" target="_blank">
--           <i class="fab fa-twitter right" style='font-size:24px;color:blue'></i></a>
+-           <i class="fab fa-twitter right" style='font-size:24px;color:#00aced'></i></a>
           </div>
         </div>
       </div>
