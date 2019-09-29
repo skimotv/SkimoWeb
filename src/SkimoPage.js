@@ -14,6 +14,7 @@ export default class SkimoPage {
 
     this.skimoId = skimoId;
     $.ajax({
+      //url: 'https://www.doorami.de/fiverrSlides',
       url: 'http://10.0.0.4:2345/skimo/' + skimoId,
       context: this,
       error: function(result) {
@@ -76,10 +77,10 @@ export default class SkimoPage {
           </div>
           <div class="card-action">
             <a class="skimo-link" style="color:red;" href="${skimoLink}" target="_blank">
--           <i class="fa fa-play left" style="font-size:24px;color:red"></i>
+            <i class="fa fa-play left" style="font-size:24px;color:red"></i>
             </a>
             <a href="${twitterLink}" target="_blank">
--           <i class="fab fa-twitter right" style='font-size:24px;color:#00aced'></i></a>
+            <i class="fab fa-twitter right" style='font-size:24px;color:#00aced'></i></a>
           </div>
         </div>
       </div>
