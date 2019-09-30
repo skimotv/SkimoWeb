@@ -1,5 +1,5 @@
 Install node
-Install firebase-admin
+npm install -g firebase-tools
 rm -rf node_modules/ package-lock.json
 npm install ajv@^6.9.1
 sudo npm install materialize-css@next
