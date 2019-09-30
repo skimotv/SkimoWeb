@@ -16,7 +16,7 @@ export default class SkipNext {
   setButtonTextSuccess(responseText) {
     try {
       if (responseText && responseText[0]) {
-        new SkipNext().showToastMessage('Skimo generated successfully');
+        new SkipNext().showToastMessage('Skimo generated successfully. Reload the page to view the Skimo');
         console.log(responseText);
       }
       else {
