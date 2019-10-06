@@ -14,8 +14,7 @@ export default class SkimoPage {
 
     this.skimoId = skimoId;
     $.ajax({
-      //url: 'https://www.doorami.de/fiverrSlides',
-      url: 'http://10.0.0.4:2345/skimo/' + skimoId,
+      url: 'http://10.0.0.26:2345/skimo/' + skimoId,
       context: this,
       error: function(result) {
         console.log("Server error", result);

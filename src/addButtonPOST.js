@@ -3,7 +3,7 @@ export default class SkipNext {
   sendInput() {
     let numericalId = location.href.split('/').pop();
     console.log("numericalId: ", numericalId);
-    let postUrl = "http://10.0.0.4:2345/skimo";
+    let postUrl = "http://10.0.0.26:2345/skimo";
     if (numericalId /*&& !isNaN(numericalId)*/) {
       let postJSON = { url: "https://www.netflix.com/watch/" + numericalId, asset_id: numericalId + "" };
       this.httpPostAsync(postUrl, postJSON, this.setButtonTextSuccess);
@@ -16,8 +16,16 @@ export default class SkipNext {
   setButtonTextSuccess(responseText) {
     try {
       if (responseText && responseText[0]) {
-        new SkipNext().showToastMessage('Skimo generated successfully. Reload the page to view the Skimo');
-        console.log(responseText);
+        let obj = JSON.parse(responseText);
+        console.log(obj.result)
+        if(obj.result == 'Error')
+        {
+          new SkipNext().showToastMessage('Skimo could not be generated. please check your Netflix user/password');
+        }
+        else
+        {
+          new SkipNext().showToastMessage('Skimo was successfully generated. please reload the page');
+        }
       }
       else {
         new SkipNext().showToastMessage('Skimo failed to generate(2)');
