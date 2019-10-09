@@ -22,6 +22,10 @@ export default class SkipNext {
         {
           new SkipNext().showToastMessage('Skimo could not be generated. please check your Netflix user/password');
         }
+        else if(obj.result == 'Trial')
+        {
+          new SkipNext().showToastMessage('You exceeded your quota for the day. Either upgrade to a paid version or try tomorrow');
+        }
         else
         {
           new SkipNext().showToastMessage('Skimo was successfully generated. please reload the page');
