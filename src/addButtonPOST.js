@@ -3,7 +3,7 @@ export default class SkipNext {
   sendInput() {
     let numericalId = location.href.split('/').pop();
     console.log("numericalId: ", numericalId);
-    let postUrl = "http://10.0.0.26:2345/skimo";
+    let postUrl = "http://localhost:2345/skimo";
     if (numericalId /*&& !isNaN(numericalId)*/) {
       let postJSON = { url: "https://www.netflix.com/watch/" + numericalId, asset_id: numericalId + "" };
       this.httpPostAsync(postUrl, postJSON, this.setButtonTextSuccess);
